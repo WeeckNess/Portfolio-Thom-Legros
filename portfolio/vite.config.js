@@ -2,6 +2,14 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   server: {
-    allowedHosts: ['portfolio-thom-legros.onrender.com'], // Ajoutez votre hôte ici
+    host: true,
+    allowedHosts: ['portfolio-thom-legros.onrender.com'],
+    proxy: {
+      '/api': {
+        target: 'https://portfolio-thom-legros.onrender.com',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 });
