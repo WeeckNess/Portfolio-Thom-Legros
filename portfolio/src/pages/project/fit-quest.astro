@@ -1,0 +1,196 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import fitquest1 from "../../assets/mockups/fitquest-1.png";
+import fitquest2 from "../../assets/mockups/fitquest-2.png";
+import fitquest3 from "../../assets/mockups/fitquest-3.png";
+import logo from "../../assets/mockups/Logo_Fitquest.png";
+---
+
+<style>
+  .bg-custom-dark {
+    background-color: #424242;
+  }
+  .text-custom-green {
+    color: #C1FA36;
+  }
+  .border-custom-green {
+    border-color: #C1FA36;
+  }
+  .bg-custom-green {
+    background-color: #C1FA36;
+  }
+  .bg-custom-green-opacity {
+    background-color: rgba(193, 250, 54, 0.2);
+  }
+  .border-custom-green-opacity {
+    border-color: rgba(193, 250, 54, 0.3);
+  }
+  .text-gradient {
+    background: linear-gradient(to right, #C1FA36, #a8e02d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glow-green {
+    box-shadow: 0 0 20px rgba(193, 250, 54, 0.25);
+  }
+</style>
+
+<Layout title="Fit Quest - Projet">
+  <div class="min-h-screen bg-gradient-to-b from-custom-dark via-[#424242] to-custom-dark text-white">
+    <div class="container mx-auto px-4 py-8">
+      <a href="/" class="inline-flex items-center text-custom-green hover:text-white transition-colors duration-300 mb-8 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Retour à l'accueil
+      </a>
+      <div class="max-w-4xl mx-auto">
+        <!-- Hero Section -->
+        <div class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-custom-dark/70"></div>
+          <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+              <div class="mb-8" data-aos="fade-down" data-aos-duration="1000">
+                <Image
+                  src={logo}
+                  alt="Fit Quest Logo"
+                  class="w-44 h-44 mx-auto"
+                  width={176}
+                  height={176}
+                  quality={100}
+                  format="webp"
+                  loading="eager"
+                />
+              </div>
+              <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gradient" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                Fit Quest
+              </h1>
+              <p class="text-xl md:text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                Une application de fitness gamifiée où chaque exercice vous fait avancer dans votre conquête territoriale
+              </p>
+              <div class="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                <span class="px-4 py-2 bg-custom-green-opacity text-custom-green border border-custom-green-opacity rounded-full text-sm">
+                  UI/UX Design
+                </span>
+                <span class="px-4 py-2 bg-custom-green-opacity text-custom-green border border-custom-green-opacity rounded-full text-sm">
+                  Figma
+                </span>
+                <span class="px-4 py-2 bg-custom-green-opacity text-custom-green border border-custom-green-opacity rounded-full text-sm">
+                  Prototype
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Details -->
+        <div class="container mx-auto px-4 py-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <!-- Left Column -->
+            <div class="space-y-8">
+              <div class="bg-custom-dark/50 p-6 rounded-xl border border-custom-green-opacity backdrop-blur-sm" data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-2xl font-bold mb-4 text-custom-green">À propos du projet</h2>
+                <p class="text-gray-300 leading-relaxed">
+                  Fit Quest est une application mobile qui transforme votre routine d'entraînement en une aventure de conquête territoriale. 
+                  Chaque exercice complété vous permet d'étendre votre territoire virtuel, tandis que les statistiques et le profil 
+                  militaire vous suivent dans votre progression.
+                </p>
+              </div>
+
+              <div class="bg-custom-dark/50 p-6 rounded-xl border border-custom-green-opacity backdrop-blur-sm" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                <h2 class="text-2xl font-bold mb-4 text-custom-green">Fonctionnalités clés</h2>
+                <ul class="space-y-3 text-gray-300">
+                  <li class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-custom-green rounded-full"></span>
+                    Système de conquête territoriale
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-custom-green rounded-full"></span>
+                    Profil militaire personnalisé
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-custom-green rounded-full"></span>
+                    Statistiques détaillées
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-custom-green rounded-full"></span>
+                    Exercices variés
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-custom-green rounded-full"></span>
+                    Intelligence artificielle pour les recommandations
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-custom-dark/50 p-6 rounded-xl border border-custom-green-opacity backdrop-blur-sm" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+                <h2 class="text-2xl font-bold mb-4 text-custom-green">Technologies utilisées</h2>
+                <div class="flex flex-wrap gap-3">
+                  <span class="px-4 py-2 bg-custom-green-opacity text-custom-green border border-custom-green-opacity rounded-full text-sm">Figma</span>
+                  <span class="px-4 py-2 bg-custom-green-opacity text-custom-green border border-custom-green-opacity rounded-full text-sm">Prototypage</span>
+                  <span class="px-4 py-2 bg-custom-green-opacity text-custom-green border border-custom-green-opacity rounded-full text-sm">UI/UX Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+              <div class="relative group" data-aos="fade-left" data-aos-duration="1000">
+                <div class="absolute -inset-1 bg-gradient-to-r from-custom-green to-[#a8e02d] rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-custom-dark rounded-lg overflow-hidden">
+                  <Image
+                    src={fitquest1}
+                    alt="Fit Quest - Interface principale"
+                    class="w-full h-auto"
+                    width={800}
+                    height={600}
+                  />
+                </div>
+              </div>
+
+              <div class="relative group" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                <div class="absolute -inset-1 bg-gradient-to-r from-[#a8e02d] to-[#8fc524] rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-custom-dark rounded-lg overflow-hidden">
+                  <Image
+                    src={fitquest2}
+                    alt="Fit Quest - Exercices"
+                    class="w-full h-auto"
+                    width={800}
+                    height={600}
+                  />
+                </div>
+              </div>
+
+              <div class="relative group" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+                <div class="absolute -inset-1 bg-gradient-to-r from-[#8fc524] to-[#75b01a] rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-custom-dark rounded-lg overflow-hidden">
+                  <Image
+                    src={fitquest3}
+                    alt="Fit Quest - Statistiques"
+                    class="w-full h-auto"
+                    width={800}
+                    height={600}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100,
+    easing: 'ease-in-out',
+  });
+</script> 
